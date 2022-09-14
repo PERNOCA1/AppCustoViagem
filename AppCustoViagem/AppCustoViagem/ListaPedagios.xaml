@@ -1,12 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCustoViagem.ListaPedagios">
+             x:Class="AppCustoViagem.ListaPedagios"
+             Title="Lista dos Pedágios"
+             BackgroundColor="Black">
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Selecione para Remover" FontSize="Title" HorizontalTextAlignment="Center"  />
+
+            <Label x:Name="lbl_msg_lista_vazia"
+                   Text="Nenhum pedágio adicionado ainda"
+                   IsVisible="false"/>
+
+            <ListView x:Name="lst_lista_pedagios"
+                      Footer=""
+                      BackgroundColor="#ffffff"
+                      SeparatorVisibility="Default">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked"></MenuItem>
+                            </ViewCell.ContextActions>
+
+                            <StackLayout  Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand"
+                                             Padding="5">
+
+                                    <Label Text="{ Binding NroPedagio }"
+                                           TextColor="OrangeRed" 
+                                           HorizontalOptions="Start"
+                                           FontSize="Large"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Somar Pedágios"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

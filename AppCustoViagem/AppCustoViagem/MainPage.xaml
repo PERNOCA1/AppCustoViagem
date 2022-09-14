@@ -43,8 +43,63 @@
                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                Keyboard="Text"  
                Style="{StaticResource TextEntrada}"/>
+        
         <Label Text="Consumo Carro"
-               Grid.Row="3" Grid.ColumnSpan="3"/>
+               Grid.Row="3" Grid.ColumnSpan="3"
+               Style="{StaticResource Titulo}"/>
+
+        <Label Text="Distância:"
+               Grid.Row="4" Grid.Column="0"
+               Style="{StaticResource LabelRotulo}"/>
+
+        <Label x:Name="lblConsumo" Text="Consumo:"
+               Grid.Row="5" Grid.Column="0"
+               Style="{StaticResource LabelRotulo}"/>
+
+        <Label x:Name="etyValorC" Text="Valor do Combustível:"
+               Grid.Row="6" Grid.Column="0"
+               FontSize="15"
+               Style="{StaticResource LabelRotulo}"/>
+
+        <Entry x:Name="etyDistancia" Placeholder="Km"
+               Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+               
+               Style="{StaticResource TextEntrada}"/>
+
+        <Entry x:Name="etyConsumo" Placeholder="Km\l"
+               Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+               
+               Style="{StaticResource TextEntrada}"/>
+
+        <Label x:Name="lblTitulo3" Text="Pedágio"
+               Grid.Row="7" Grid.ColumnSpan="3"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               Style="{StaticResource LabelTitulo}"/>
+
+        <Label Text="Valor"
+               Grid.Row="8" Grid.Column="0" Grid.RowSpan="2"
+               Style="{StaticResource LabelRotulo}"/>
+
+        <Entry x:Name="etyValorP" Placeholder="R$ 0,0"
+               Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+               Style="{StaticResource TextEntrada}"/>
+
+        <Button x:Name="btnPedagio" Text="Add" 
+                Grid.Row="8" Grid.Column="2" 
+                Clicked="BtnPedagio_Clicked"/>
+
+        <Button Text="Lista"
+                Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"
+                Clicked="btnListaPedagio_Clicked"/>
+
+        <Button Text="Calcular" 
+                Grid.Row="10" Grid.Column="2"
+                Clicked="BtnCalcular_Clicked"/>
+
+        <Button Text="Limpar"
+                Grid.Row="10" Grid.Column="2"
+                Clicked="BtnLimpar_Clicked"/>
 
     </Grid>
 

@@ -16,5 +16,15 @@ namespace AppCustoViagem
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
