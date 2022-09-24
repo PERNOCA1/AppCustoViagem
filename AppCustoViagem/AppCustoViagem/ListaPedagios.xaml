@@ -35,6 +35,9 @@
                                            TextColor="OrangeRed" 
                                            HorizontalOptions="Start"
                                            FontSize="Large"/>
+
+                                    <Label Text="{ Binding Valor }"
+                                           FontSize="Large"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
