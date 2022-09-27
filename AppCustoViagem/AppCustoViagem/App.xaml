@@ -26,5 +26,17 @@
             <Setter Property="FontSize" Value="Large"/>
         </Style>
 
+        <Style TargetType="Label" x:Key="LabelRotulo">
+            <Setter Property="TextColor" Value="DarkBlue"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="TextEntrada">
+            <Setter Property="TextColor" Value="DarkBlue"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelTitulo">
+            <Setter Property="TextColor" Value="DarkBlue"/>
+        </Style>
+
     </Application.Resources>
 </Application>
